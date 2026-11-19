@@ -1,0 +1,35 @@
+{
+    "version": "0.1.3",
+    "description": "Light, private, open source replacement for the apps of OneDrive, Dropbox, Box, and more. Built on rclone.",
+    "homepage": "https://drivecraft.fabrizioballiano.com/",
+    "license": "MIT|Apache-2.0",
+    "notes": "DriveCraft syncs to %USERPROFILE%\\DriveCraft. Its settings are in %APPDATA%\\drivecraft.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fballiano/drivecraft/releases/download/v0.1.3/DriveCraft-0.1.3-windows-x64.zip",
+            "hash": "f838bed5d5a8d3749687a569a741f7e583672f9f6e725c8546e3533aad2d5352"
+        },
+        "arm64": {
+            "url": "https://github.com/fballiano/drivecraft/releases/download/v0.1.3/DriveCraft-0.1.3-windows-arm64.zip",
+            "hash": "fe820125c48ce1a36160a8895d8b0ade48471db892de05543f80c419462ebba5"
+        }
+    },
+    "extract_dir": "DriveCraft",
+    "shortcuts": [
+        [
+            "DriveCraft.exe",
+            "DriveCraft"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fballiano/drivecraft/releases/download/v$version/DriveCraft-$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/fballiano/drivecraft/releases/download/v$version/DriveCraft-$version-windows-arm64.zip"
+            }
+        }
+    }
+}
